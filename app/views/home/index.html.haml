@@ -1,1 +1,29 @@
-%h1 GuavaIT Website
+.hero-unit
+  .container
+    .text-center
+      %h1{:style => "font-size: 250%; line-height: 120%; color: #383938; font-weight: lighter;"} Have a web or mobile project?
+      %p We’d love to design & develop your next application.
+      %p= link_to 'Contact us about your project', '#', :class => 'link-button'
+
+#dark.hero-unit.hidden-phone
+  .container.text-center
+    %h3 some examples of our work
+    .row-fluid.image-shadow
+      .span4= link_to image_tag('image.jpg'), '#'
+      .span4= link_to image_tag('image.jpg'), '#'
+      .span4= link_to image_tag('image.jpg'), '#'
+    %p= link_to 'See more', '#', :class => 'link-button'
+
+.hero-unit
+  .container
+    .text-center
+      %p — About Resolve Digital —
+      .span12= image_tag('all-devises.jpg')
+      %p We use responsive design to get your project looking great on just about any screen.
+
+#grey.hero-unit
+  .container
+    .text-center
+      %p{:style => "font-size: 200%; line-height: 110%; color: #3b3b3b"} design & development services in one place
+      %p You'll love dealing with just one company bringing experience, creativity and a strategic perspective to your web and mobile applications.
+      %p= link_to 'Read more about our services', '#', :class => 'link-button'

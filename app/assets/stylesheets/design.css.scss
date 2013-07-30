@@ -1,0 +1,130 @@
+@mixin rounded-corners($radius) {
+  border-radius: $radius;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+}
+
+@mixin box_shadow($a, $b, $c, $d, $color) {
+  -webkit-box-shadow: $a $b $c $d $color;
+  -moz-box-shadow: $a $b $c $d $color;
+  box-shadow: $a $b $c $d $color;
+}
+
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   16px;
+  line-height: 20px;
+}
+
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+.main_menu{
+  .navbar-inner{
+    opacity: 0.95;
+    background: #F66521;
+  }
+  img{
+    width: 200px;
+    padding: 14px 0;
+  }
+}
+
+#custon-menu {
+  a { 
+    height: 65px;
+    line-height: 65px;
+    color: white;
+    font-size: 18px;
+    text-shadow: none;
+    &:hover {
+      background: #ed5e1c
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  .active{
+    a{
+      color: #7f2900;
+      background: #ed5e1c;
+    }
+  }
+}
+
+#grey {
+  background: #eee !important;
+  padding-bottom: 10px;
+  @include rounded-corners(0);
+}
+
+#dark {
+  background: #424348 !important;
+  padding-bottom: 10px;
+  @include rounded-corners(0);
+  color: #FFF;
+}
+
+.link-button {
+  background: #4CBDFD;
+  @include rounded-corners(5px);
+  -webkit-box-shadow: 0px 3px 0px #1da2ec;
+  -moz-box-shadow: 0px 3px 0px #1da2ec;
+  box-shadow: 0px 3px 0px #1da2ec;
+  color: white;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: 100;
+  padding: 10px 20px;
+  display: inline-block;
+  border: 1px solid #53c2ff;
+  margin: 30px 0px;
+  &:hover {
+    background: #66c7ff;
+    color: #FFF;
+    text-decoration: none;
+  }
+}
+
+.image-shadow {
+  img{
+    @include box_shadow(0px, 3px, 0px, 1px, rgba(0,0,0,0.2));
+    @include rounded-corners(8px)
+  }
+}
