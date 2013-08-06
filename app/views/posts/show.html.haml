@@ -1,18 +1,20 @@
-%p#notice= notice
+.container
+  .page-content
+    %p#notice= notice
 
-%p
-  %b Title:
-  = @post.title
-%p
-  %b Category:
-  = @post.category
-%p
-  %b Content:
-  = @post.content
-%p
-  %b Active:
-  = @post.active
+    %p
+      %b Title:
+      = @post.title
+    %p
+      %b Category:
+      = @post.category
+    %p
+      %b Content:
+      = @post.content
+    %p
+      %b Active:
+      = @post.active
 
-= link_to 'Edit', edit_post_path(@post)
-\|
-= link_to 'Back', posts_path
+    = link_to 'Edit', edit_post_path(@post)
+    \|
+    = link_to 'Back', posts_path

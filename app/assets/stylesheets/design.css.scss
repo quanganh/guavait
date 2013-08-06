@@ -122,3 +122,10 @@ div.field, div.actions {
 .image-shadow img{
   @include box_shadow(0px, 3px, 0px, 1px, rgba(0,0,0,0.2));
 }
+
+.page-content {
+  font-weight: lighter;
+  letter-spacing: 1px;
+  margin-top: 70px;
+  padding: 30px 0px 0px 30px;
+}
