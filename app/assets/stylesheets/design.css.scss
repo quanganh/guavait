@@ -62,14 +62,13 @@ div.field, div.actions {
   }
   img{
     width: 200px;
-    padding: 14px 0;
   }
 }
 
 #custon-menu {
   a { 
-    height: 65px;
-    line-height: 65px;
+    height: 70px;
+    line-height: 50px;
     color: white;
     font-size: 18px;
     text-shadow: none;
@@ -96,8 +95,6 @@ div.field, div.actions {
 
 #dark {
   background: #424348 !important;
-  padding-bottom: 10px;
-  @include rounded-corners(0);
   color: #FFF;
 }
 
@@ -121,10 +118,7 @@ div.field, div.actions {
     text-decoration: none;
   }
 }
-
-.image-shadow {
-  img{
-    @include box_shadow(0px, 3px, 0px, 1px, rgba(0,0,0,0.2));
-    @include rounded-corners(8px)
-  }
+  
+.image-shadow img{
+  @include box_shadow(0px, 3px, 0px, 1px, rgba(0,0,0,0.2));
 }

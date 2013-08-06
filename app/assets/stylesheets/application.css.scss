@@ -9,7 +9,7 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require bootstrap-glyphicons
  */
  @import "design.css.scss";
  @import "bootstrap.css.scss";
- @import "bootstrap-responsive";

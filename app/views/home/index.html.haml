@@ -1,27 +1,27 @@
-.hero-unit
+.jumbotron{:style => "margin-top: 70px;"}
   .container
     .text-center
       %h1{:style => "font-size: 250%; line-height: 120%; color: #383938; font-weight: lighter;"} Have a web or mobile project?
       %p We’d love to design & develop your next application.
       %p= link_to 'Contact us about your project', '#', :class => 'link-button'
 
-#dark.hero-unit.hidden-phone
+#dark.jumbotron.hidden-phone
   .container.text-center
     %h3 some examples of our work
-    .row-fluid.image-shadow
-      .span4= link_to image_tag('image.jpg'), '#'
-      .span4= link_to image_tag('image.jpg'), '#'
-      .span4= link_to image_tag('image.jpg'), '#'
-    %p= link_to 'See more', '#', :class => 'link-button'
+    .row.image-shadow.img-responsive.img-rounded
+      .col-sm-4= link_to image_tag('image.jpg'), '#'
+      .col-sm-4= link_to image_tag('image.jpg'), '#'
+      .col-sm-4= link_to image_tag('image.jpg'), '#'
+    %p= link_to content_tag(:i, nil, :class => 'glyphicon glyphicon-eye-open') + ' See more', '#', :class => 'link-button'
 
-.hero-unit
+.jumbotron
   .container
-    .text-center
+    .row.text-center
       %p — About GuavaIT —
-      .span12= image_tag('all-devises.jpg')
+      .col-lg-12.img-responsive= image_tag('all-devises.jpg')
       %p We use responsive design to get your project looking great on just about any screen.
 
-#grey.hero-unit
+#grey.jumbotron
   .container
     .text-center
       %p{:style => "font-size: 200%; line-height: 110%; color: #3b3b3b"} design & development services in one place
