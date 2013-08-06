@@ -8,6 +8,7 @@ gem 'simple_form', '>= 3.0.0.rc'
 gem 'turbolinks'
 gem 'jbuilder'
 gem 'meta-tags', :require => 'meta_tags'
+gem 'unicorn'
 
 group :assets do
   gem 'coffee-rails'
