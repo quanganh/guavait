@@ -41,3 +41,13 @@ module Guavait
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
   end
 end
+
+module AssetsInitializers
+  class Railtie < Rails::Railtie
+    initializer "assets_initializers.initialize_rails",
+                :group => :assets do |app|
+      Devise.warden_config = Warden::Config.new
+      require "#{Refinery::Core.root}/config/routes"
+    end
+  end
+end

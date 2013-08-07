@@ -9,10 +9,10 @@ gem 'turbolinks'
 gem 'jbuilder'
 gem 'meta-tags', :require => 'meta_tags'
 gem 'unicorn'
+gem 'jquery-rails'
 
 group :assets do
   gem 'coffee-rails'
-  gem 'jquery-rails'
   gem 'bootstrap-sass'
   gem 'uglifier'
   gem 'execjs'
@@ -26,7 +26,10 @@ group :development do
 end
 
 group :test, :development do
+  gem 'database_cleaner'
   gem 'minitest-rails', '0.5.2' # bloody mofos
+  gem 'factory_girl_rails'
+  gem 'capybara'
 end
 
 group :production do
