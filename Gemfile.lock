@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/bbozo/minitest-colorize.git
+  revision: 61ce34477c2da554b126a17013317323765cd366
+  specs:
+    minitest-colorize (0.0.4.1)
+      minitest (>= 2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -62,6 +69,7 @@ GEM
     factory_girl_rails (4.2.1)
       factory_girl (~> 4.2.0)
       railties (>= 3.0.0)
+    ffaker (1.18.0)
     ffi (1.2.1)
     haml (4.0.3)
       tilt
@@ -94,6 +102,8 @@ GEM
       actionpack
     mime-types (1.23)
     minitest (4.7.5)
+    minitest-mustwonted (1.0.2)
+      minitest
     minitest-rails (0.5.2)
       minitest (~> 4.0)
       rails (>= 3.0)
@@ -194,11 +204,14 @@ DEPENDENCIES
   debugger
   execjs
   factory_girl_rails
+  ffaker
   haml-rails
   html2haml
   jbuilder
   jquery-rails
   meta-tags
+  minitest-colorize!
+  minitest-mustwonted
   minitest-rails (= 0.5.2)
   mysql2
   pg
@@ -207,7 +220,7 @@ DEPENDENCIES
   rails_12factor
   sass-rails
   sdoc
-  simple_form (>= 3.0.0.rc)
+  simple_form
   therubyracer
   turbolinks
   uglifier

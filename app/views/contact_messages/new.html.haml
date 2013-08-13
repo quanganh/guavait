@@ -1,0 +1,37 @@
+.container.margin-menu-top
+  .padding-main
+    .page-header
+      %h4.text-muted Contact Us
+    .row
+      .col-sm-12
+        .padding-horizon
+          %p.text-muted We’d love to hear from you. Interested in working together? Fill out the form below with some info about your project and I will get back to you as soon as I can. Please allow a couple days for me to respond.
+        .padding-horizon
+          = render 'form'
+#grey.jumbotron.margin-menu-top
+  .container
+    .row
+      .col-sm-5
+        #contact-box.panel
+          .padding-main
+            %legend Get in touch
+            %p 
+              Guavait address
+              %br Viet Nam
+              %span Zip Code
+            %p 
+              %i.glyphicon.glyphicon-phone
+              %span Phone number
+            %p 
+              %i.glyphicon.glyphicon-envelope
+              %span Email Address
+            %legend Work with us
+            %p We’ve prepared a simple project planner to get to know you and your project better.
+            %p.text-center=link_to "LET'S GET START", "#", class: 'btn btn-primary'
+      .col-sm-7.text-center
+        %legend.text-info Social Networks
+        .social_networks
+          %ul.list-inline.text-center
+            %li.icon_fb= link_to image_tag('facebook.png', :alt => 'Follow us on Facebook'), '#', :class => 'icon_fb'
+            %li.icon_tw= link_to image_tag('twitter.png', :alt => 'Follow us on Twitter'), '#'
+            %li.icon_gp= link_to image_tag('googleplus.png', :alt => 'Follow us on GooglePlus'), '#'

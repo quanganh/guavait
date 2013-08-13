@@ -1,8 +1,17 @@
 Guavait::Application.routes.draw do
 
+  resources :contact_messages, except: [:index, :edit]
+
   resources :posts
 
-  root :to => 'home#index'
+  root to: 'home#index'
+  get '/home' => redirect('/')
+
+  resources :pages, only: :nil do
+    collection do
+      get :about
+    end
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

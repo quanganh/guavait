@@ -1,0 +1,19 @@
+.container.margin-menu-top
+  .container_custom
+    .page-header
+      %h4.text-muted Contact Message
+    .row
+      .col-sm-12
+        %p#notice= notice
+        %p
+          %b Name:
+          = @contact_message.name
+        %p
+          %b Email:
+          = @contact_message.email
+        %p
+          %b Phone:
+          = @contact_message.phone
+        %p
+          %b Message:
+          = @contact_message.message

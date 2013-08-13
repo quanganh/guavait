@@ -4,7 +4,7 @@ gem 'rails', '4.0.0'
 gem 'mysql2'
 gem 'sass-rails'
 gem 'haml-rails'
-gem 'simple_form', '>= 3.0.0.rc'
+gem 'simple_form'
 gem 'turbolinks'
 gem 'jbuilder'
 gem 'meta-tags', :require => 'meta_tags'
@@ -30,6 +30,9 @@ group :test, :development do
   gem 'minitest-rails', '0.5.2' # bloody mofos
   gem 'factory_girl_rails'
   gem 'capybara'
+  gem 'ffaker'
+  gem 'minitest-colorize', github: 'bbozo/minitest-colorize'
+  gem 'minitest-mustwonted'
 end
 
 group :production do

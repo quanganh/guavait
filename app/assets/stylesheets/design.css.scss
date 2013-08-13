@@ -10,6 +10,13 @@
   box-shadow: $a $b $c $d $color;
 }
 
+$fsize1: 46px;
+$fsize2: 38px;
+$fsize3: 32px;
+$fsize4: 24px;
+$fsize5: 18px;
+$fsize6: 14px;
+
 body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size:   16px;
@@ -68,7 +75,7 @@ div.field, div.actions {
 #custon-menu {
   a { 
     height: 70px;
-    line-height: 50px;
+    line-height: 40px;
     color: white;
     font-size: 18px;
     text-shadow: none;
@@ -87,15 +94,31 @@ div.field, div.actions {
   }
 }
 
+.margin-menu-top{
+  margin-top: 70px;
+}
+
+.padding-main {
+  padding: 20px;
+}
+
+.padding-horizon {
+  padding: 20px 0;
+}
+
 #grey {
   background: #eee !important;
-  padding-bottom: 10px;
   @include rounded-corners(0);
 }
 
 #dark {
   background: #424348 !important;
   color: #FFF;
+}
+
+#light-blue{
+  background-color: #4baad3;
+  color: #fff;
 }
 
 .link-button {
@@ -118,7 +141,7 @@ div.field, div.actions {
     text-decoration: none;
   }
 }
-  
+
 .image-shadow img{
   @include box_shadow(0px, 3px, 0px, 1px, rgba(0,0,0,0.2));
 }
@@ -128,4 +151,29 @@ div.field, div.actions {
   letter-spacing: 1px;
   margin-top: 70px;
   padding: 30px 0px 0px 30px;
+}
+
+.contact-form{
+  color: #999999;
+}
+
+.contact-form .input-group{
+  margin-bottom: 15px;
+}
+
+#contact-box{
+  font-size: 14px;
+  color: #777777;
+  margin-top: -110px;
+  box-shadow: 0 0 7px 0 rgba(26, 26, 26, 0.4);
+  -webkit-box-shadow: 0 0 7px 0 rgba(26, 26, 26, 0.4);
+}
+
+.social_networks {
+  a{
+    opacity: 0.7;
+    &:hover{
+      opacity: 1;
+    }
+  }
 }

@@ -1,0 +1,18 @@
+.container.margin-menu-top
+  .jumbotron.text-center
+    .row
+      .col-lg-12
+        %h2
+          = title 'The change you wanted was rejected.'
+          %small
+            %font{:color => "red", :face => "Tahoma"} Error 422
+        %br
+        %p
+          Maybe you tried to change something you didn't have access to. Use your browsers
+          %b Back
+          button to navigate to the page you have prevously come from
+        %p
+          %b Or you could just press this neat little button:
+        %a.btn.btn-large.btn-warning{href: root_path}
+          %i.glyphicon.glyphicon-home
+          Take Me Home
