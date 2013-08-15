@@ -294,9 +294,9 @@ html {
 }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.428571429;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
   color: #333333;
   background-color: #ffffff;
 }
@@ -339,8 +339,10 @@ a:focus {
   -webkit-border-radius: 8px;
 }
 
-.img-circle {
+.img-circle img{
   border-radius: 500px;
+  -webkit-border-radius: 500px;
+  -moz-border-radius: 500px;
 }
 
 hr {
@@ -403,6 +405,10 @@ cite {
 
 .text-center {
   text-align: center;
+}
+
+.text-bold {
+  font-weight: bold;
 }
 
 h1,
@@ -501,8 +507,7 @@ h4 small,
 }
 
 .page-header {
-  padding-bottom: 9px;
-  margin: 40px 0 20px;
+  margin: 20px 0 20px;
   border-bottom: 1px solid #eeeeee;
 }
 
@@ -4307,6 +4312,8 @@ a.list-group-item.active > .badge,
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
   opacity: 0.5;
   filter: alpha(opacity=50);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .carousel-control.left {
@@ -4433,7 +4440,7 @@ a.list-group-item.active > .badge,
 
 .jumbotron {
   padding: 30px;
-  font-size: 21px;
+  font-size: 18px;
   font-weight: 200;
   line-height: 2.1428571435;
   color: inherit;
@@ -4442,6 +4449,7 @@ a.list-group-item.active > .badge,
 .jumbotron h1 {
   line-height: 1;
   color: inherit;
+  font-size: 40px;
 }
 
 .jumbotron p {
@@ -4722,6 +4730,7 @@ td.hidden-lg {
   }
   .jumbotron {
     padding: 50px 60px;
+    font-size: 21px;
   }
   .jumbotron h1 {
     font-size: 54px;
