@@ -17,12 +17,6 @@ $fsize4: 24px;
 $fsize5: 18px;
 $fsize6: 14px;
 
-body, p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size:   16px;
-  line-height: 20px;
-}
-
 div.field, div.actions {
   margin-bottom: 10px;
 }
@@ -98,12 +92,16 @@ div.field, div.actions {
   margin-top: 70px;
 }
 
-.padding-main {
+.main-padding {
   padding: 20px;
 }
 
-.padding-horizon {
+.horizontal-padding {
   padding: 20px 0;
+}
+
+.vertical-padding {
+  padding: 0 20px;
 }
 
 #grey {
@@ -164,7 +162,7 @@ div.field, div.actions {
 #contact-box{
   font-size: 14px;
   color: #777777;
-  margin-top: -110px;
+  margin-top: -140px;
   box-shadow: 0 0 7px 0 rgba(26, 26, 26, 0.4);
   -webkit-box-shadow: 0 0 7px 0 rgba(26, 26, 26, 0.4);
 }
@@ -175,5 +173,45 @@ div.field, div.actions {
     &:hover{
       opacity: 1;
     }
+  }
+}
+
+.about {
+  color: #3F3F3F;
+  line-height: 24px;
+  font-size: 16px;
+}
+
+.team_member .img-circle img{
+  background-color: #999999;
+  -webkit-transition: all 250ms linear;
+  -moz-transition: all 250ms linear;
+  -o-transition: all 250ms linear;
+  transition: all 250ms linear;
+  &:hover{
+    opacity: 0;
+  }
+}
+
+.team_member figure{
+  background-image: url('images-person.jpg');
+  @include rounded-corners(500px);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.list-button li {
+  background: #3a9ac4;
+  @include rounded-corners(8px);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  &:hover {
+    cursor: pointer;
+    background: #235c75;
+  }
+  a{
+    color: #fff;
+    text-decoration: none;
   }
 }

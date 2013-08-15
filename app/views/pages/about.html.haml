@@ -1,4 +1,82 @@
-.jumbotron
-  .container.margin-menu-top
-    .text-muted.text-center
+.jumbotron.margin-menu-top
+  .container.about
+    .text-center
       %h2 Who are we and how it all got started. Our story.
+    .row.margin-menu-top
+      .col-sm-6
+        %h5.text-bold There are many variations of passages Lorem Ipsum available, injected generators on the hidden.
+        %br
+        %p There are many variations of passages of Lorem Ipsum available, injected generators on the embarrassing hidden in the middle all the dictionary making it look like readable English. Many desktop publishing packages and web page editors.
+        %br
+        %p There are many variations of passages of Lorem Ipsum available, but the ndictionary of over 200 Latin words, combined with a handful of models The generated Lorem Ipsum is therefore always free from repetition, the injected humour, or non-characteristic words etc.
+      .col-sm-6.hidden-sm
+        #carousel-about-us.carousel.slide
+          %ol.carousel-indicators
+            %li.active{"data-slide-to" => "0", "data-target" => "#carousel-about-us"}
+            %li{"data-slide-to" => "1", "data-target" => "#carousel-about-us"}
+            %li{"data-slide-to" => "2", "data-target" => "#carousel-about-us"}
+          .carousel-inner.img-responsive.img-rounded
+            .item.active
+              = image_tag('/assets/carousel.jpg')
+            .item
+              = image_tag('/assets/carousel.jpg')
+            .item
+              = image_tag('/assets/carousel.jpg')
+          %a.left.carousel-control{"data-slide" => "prev", href: "#carousel-about-us"}
+            %span.icon-prev
+          %a.right.carousel-control{"data-slide" => "next", href: "#carousel-about-us"}
+            %span.icon-next
+#dark.jumbotron
+  .container.team_member
+    .page-header
+      %h4 Meet our Team
+    .row.img-responsive
+      .col-sm-6.horizontal-padding
+        .row
+          .col-4
+            %figure.image-shadow.img-circle= link_to image_tag('gv.png'), '#'
+          .col-8.horizontal-padding
+            %p Giang Nguyen
+            %small.text-muted Sale Manager / Founder
+            = render partial: 'shared/socialnetwork'
+      .col-sm-6.horizontal-padding
+        .row
+          .col-4
+            %figure.image-shadow.img-circle= link_to image_tag('gv.png'), '#'
+          .col-8.horizontal-padding
+            %p Huy Le
+            %small.text-muted Developer / Founder
+            = render partial: 'shared/socialnetwork'
+    .row.img-responsive
+      .col-sm-6.horizontal-padding
+        .row
+          .col-4
+            %figure.image-shadow.img-circle= link_to image_tag('gv.png'), '#'
+          .col-8.horizontal-padding
+            %p Toan Le
+            %small.text-muted Developer / Designer
+            = render partial: 'shared/socialnetwork'
+      .col-sm-6.horizontal-padding
+        .row
+          .col-4
+            %figure.image-shadow.img-circle= link_to image_tag('gv.png'), '#'
+          .col-8.horizontal-padding
+            %p Anh Ho
+            %small.text-muted Developer / Designer
+            = render partial: 'shared/socialnetwork'
+.jumbotron
+  .container
+    .row.text-center
+      %h2.text-primary Who's using stories.
+      .col-lg-12.main-padding
+        .horizontal-padding
+          %ul.list-inline.list-button
+            .row
+              .col-sm-3.col-6
+                %li=link_to content_tag(:i, nil, class: 'glyphicon glyphicon-globe') + ' Earth', '#'
+              .col-sm-3.col-6
+                %li=link_to content_tag(:i, nil, class: 'glyphicon glyphicon-heart') + ' Love', '#'
+              .col-sm-3.col-6
+                %li=link_to content_tag(:i, nil, class: 'glyphicon glyphicon-plane') + ' Leaves', '#'
+              .col-sm-3.col-6
+                %li=link_to content_tag(:i, nil, class: 'glyphicon glyphicon-link') + ' Clouds', '#'
