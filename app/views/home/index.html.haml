@@ -3,7 +3,7 @@
     .text-center
       %h1 Have a web or mobile project?
       %p We’d love to design & develop your next application.
-      %p= link_to 'Contact us about your project', '#', class: 'link-button'
+      %p= link_to 'Contact us about your project', new_contact_message_path, class: 'link-button'
 
 #dark.jumbotron.hidden-sm
   .container.text-center
@@ -17,7 +17,7 @@
 .jumbotron
   .container
     .row.text-center
-      %p — About GuavaIT —
+      %p= link_to '— About GuavaIT —', about_pages_path
       .col-lg-12.img-responsive= image_tag('all-devises.jpg')
       %p We use responsive design to get your project looking great on just about any screen.
 
@@ -26,4 +26,4 @@
     .text-center
       %p{:style => "font-size: 200%; line-height: 110%; color: #3b3b3b"} design & development services in one place
       %p You'll love dealing with just one company bringing experience, creativity and a strategic perspective to your web and mobile applications.
-      %p= link_to 'Read more about our services', '#', class: 'link-button'
+      %p= link_to 'Read more about our services', services_path, class: 'link-button'

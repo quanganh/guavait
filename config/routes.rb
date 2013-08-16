@@ -8,6 +8,12 @@ Guavait::Application.routes.draw do
     end
   end
 
+  resources :services, only: :index do
+    collection do
+      get :ror
+    end
+  end
+
   root to: 'home#index'
 
   # Example of regular route:
