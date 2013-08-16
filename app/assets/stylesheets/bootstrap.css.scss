@@ -346,10 +346,11 @@ a:focus {
 }
 
 hr {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   border: 0;
-  border-top: 1px solid #eeeeee;
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #ffffff;
 }
 
 p {
@@ -423,7 +424,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Poly", serif, Arial, sans-serif;
   font-weight: 500;
   line-height: 1.1;
 }
@@ -4448,7 +4449,6 @@ a.list-group-item.active > .badge,
 
 .jumbotron h1 {
   line-height: 1;
-  color: inherit;
   font-size: 40px;
 }
 
