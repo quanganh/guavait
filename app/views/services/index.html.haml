@@ -1,56 +1,72 @@
+#servicebar.visible-md.visible-lg
+  .container.margin-menu-top
+    %ul.nav.nav-pills
+      %li.active
+        %a{:href => "#Web"} Design & Development
+      %li
+        %a{:href => "#hosting"} Hosting
+      %li
+        %a{:href => "#seo"} SEO
+      %li
+        %a{:href => "#opensource"} Open Source
+
 .jumbotron.margin-menu-top
   .container
     .text-center
       %h1.text-bold.text-primary Web Design & Development
       %p.text-muted Bringing experience, creativity and a strategic perspective to your web applications.
-    .row
+    #Web.row
       .col-sm-6.paragraph-detail
-        .horizontal-padding
+        .main-padding
           %h4.text-primary
             %i.icon-thumbs-up
             Design with Bootstrap
           %p We believe good design is a natural outcome of simplicity and ease-of-use. The websites are built using HTML5, CSS3, fluid layouts and Media Queries.
-        .horizontal-padding
+        .main-padding
           %h4.text-primary
             %i.icon-rocket
             Page speed
           %p The theme is highly optimized to ensure fast loading time by lazy-loading of images and beeing minimal by design.
-        .horizontal-padding
+        .main-padding
           %h4.text-primary
             %i.icon-tablet
             Responsive Design
           %p The website is built to look great on every device. Custom menu for mobile devices, to ensure the best expierence.
       .col-sm-6.paragraph-detail
-        .horizontal-padding
+        .main-padding
           %h4.text-primary 
             %i.icon-diamond
             Ruby on Rails development
           %p Working with Ruby on Rails since 2009, we've developed new sites and applications for our clients from rising startups to technology giants. If you have an existing Rails app we can bring it up-to-date, improve performance, and extend its functionality.
-        .horizontal-padding
+        .main-padding
           %h4.text-primary 
             %i.icon-sitemap
             RoR team augmentation
           %p Accelerate your project with dedicated programmers working independently or alongside your in-house team. Beyond coding, we'll provide a strategic perspective on architecting solutions for growth.
-        .horizontal-padding
+        .main-padding
           %h4.text-primary 
             %i.icon-gauge
             Active Admin consulting
           %p We’ve used Active Admin to create administrative interfaces for a number of projects. It allows us to make rapid progress and focus our efforts on the specific needs of your Rails application.
     %hr
-    .row.horizontal-padding
+    #hosting.row.horizontal-padding
+      .col-sm-6.paragraph-detail
+        %h4.margin-menu-top.text-bold Website Hosting
+        %p We don’t just offer website design/development and marketing services, GuavaIT provides many solutions under one roof. We also offer an assortment of technical and support services to ease up the burden of managing your business online. Reliable. Quick. Secure. Those are the words that best describe the hosting services at GuavaIT.
+      .col-sm-6.text-center
+        .img-responsive.img-rounded
+          = image_tag('hosting_image.jpg')
+    %hr
+    #seo.row.horizontal-padding
       .col-sm-6.text-center
         .img-responsive.img-rounded
           = image_tag('seo_image.jpg')
       .col-sm-6.paragraph-detail
-        %h3.text-info
-          %i.glyphicon.glyphicon-globe
-          Search Engine Optimization
-        %br
+        %h4.margin-menu-top.text-bold Search Engine Optimization
         %p The latest trends in SEO target a variety of search results, including image search, local search, video search and even industry-specific vertical search. This is what gives a website that absolute web presence to make it reach to a worldwide audience.
-        %br
         %p Search visibility is the key that opens the door to your ultimate success by helping you gain new visitors and prospective customers. These highest search engine results, are in fact, attained as a product of prudently created page content, suitable meta tags and after a thorough competitive analysis of your target audience.
     %hr
-    .text-center.paragraph-detail.horizontal-padding
+    #opensource.text-center.paragraph-detail.horizontal-padding
       %h2.text-info Open Source Development
       %p You want a ready-made solution? We can even do that for you! Amongst all the convenient solutions available within the market, we only choose to offer the best to our clients.
       .row.horizontal-padding
@@ -71,4 +87,32 @@
       .col-lg-12.text-center
         %h2 IT STARTS WITH YOU
         %p.text-muted Tell us about your project
-        .horizontal-padding= link_to 'Contact Us', new_contact_message_path, class: 'btn btn-lg btn-info'
+        .horizontal-padding= link_to 'Contact Us', new_contact_message_path, class: 'btn btn-lg btn-primary'
+
+=link_to 'scroll', '#', class: 'scrollup'
+
+:javascript
+  $('body').scrollspy({ target: '#servicebar' });
+
+  $(document).ready(function(e) {
+    //smooth scroll
+    $('#servicebar ul li a').bind('click', function(e) {
+      e.preventDefault();
+      $('html,body').animate({scrollTop: $(this.hash).offset().top - 70});
+    });
+
+    //scroll to top
+    $(window).scroll(function(){
+      if ($(this).scrollTop() > 300) {
+        $('.scrollup').fadeIn();
+      } else {
+        $('.scrollup').fadeOut();
+      }
+    });
+    $('.scrollup').click(function(e){
+      e.preventDefault();
+      $("html, body").animate({ scrollTop: 0 }, 600);
+      return false;
+    });
+
+  });
